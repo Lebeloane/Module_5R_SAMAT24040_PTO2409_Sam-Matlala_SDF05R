@@ -49,6 +49,72 @@ p {
         7px 7px 20px 0px rgba(0, 0, 0, .1),
         4px 4px 5px 0px rgba(0, 0, 0, .1);
     outline: none;
+    
 }
 
 /* Add your custom styles for btn-1, btn-2, and btn-3 */
+.btn-1 {
+    font-weight: bold; /* Bold text */
+    letter-spacing: 1px; /* Adds space between letters */
+    color: #239423; /* text color green */
+    transition: all 1000ms; /* Smooth transition */
+    outline: 2px solid #239423; /* border green 2px border space */
+    border: #a0f42a; /* overrider the original border */
+}
+
+.btn-1:focus {
+    color: #a0f42a; /* text color change */
+    transform: scale(1.1); /* makes it grow slightly */
+    outline: 2px solid #a0f42a; /* border */
+    box-shadow: 4px 5px 17px -4px #a0f42a; /*  adds a shadow glows */
+}
+
+
+.btn-2 {
+    border: 2px solid #17c3b2; /* border */
+    border-radius: 50%; /* makes the border oval(circular) */
+    transition: 0.3s; /* smooth transition */
+    color: #17c3b2; /* text color */
+    overflow: hidden;
+}
+
+.btn-2::before {
+    content: ''; /* Creating a pseudo-element */
+    width: 0; /* Setting width to zero */
+    height: 300%; /* Setting height to 300% */
+    position: absolute; /* Absolute positioning */
+    /* Absolute positioning */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg); /* Absolute positioning */
+    background: #17c3b2; /* backgroundcolor */
+    transition: 0.5s ease-in; /* Transition effect */
+    display: block; /* Display block */
+    z-index: -1;
+}
+ 
+.btn-2:focus::before {
+    width: 105%; /*  expands the background 5% above normal */
+}
+
+.btn-2:focus {
+    color: #ffffff /*  text color when clicked */
+}
+
+
+
+.btn-3 {
+    border-radius: 10px; /* a little rounded on the edges */
+    font-weight: bolder; /* text to be bold */
+    color: #a27373a0; /* text color */
+    background-color: #272525; /*  background color */
+    border: 1px solid #ffffff80; /* light border */
+    transition: 0.5s ease; /* smooth transition */
+}
+
+.btn-3:focus {
+    color: #ffffff; /* text color */
+    background: #008cff; /* background color */
+    box-shadow: 0 0 5px #008cff, 0 0 20px #008cff, 0 0 50px #008cff, 0 0 100px #008cff;
+    /* box-shadow: offset-x offset-y blur-radius spread-radius color; */
+}
